@@ -4,17 +4,20 @@
     <v-btn :icon="true" class="scroll-down" @click="scrollBottom">&#9660;</v-btn>
     <h1 class="title">Slasher Rankings</h1>
     <SlasherCard :reverse-arrow="1" :index="0" :picture="Jason" last-name="Voorhes jr" first-name="Jason" />
-    <SlasherCard :reverse-arrow="1" :index="1" :picture="ConeHead" last-name="Head" first-name="Cone" />
-    <SlasherCard :reverse-arrow="1" :index="2" :picture="Silencer" last-name="Silencer" first-name="The" />
-    <SlasherCard :reverse-arrow="1" :index="3" :picture="NormanDates" last-name="Dates" first-name="Norman" />
+    <SlasherCard :reverse-arrow="1" :index="1"
+                 picture="https://www.giantfreakinrobot.com/wp-content/uploads/2022/08/rick-astley.jpg"
+                 first-name="Cardboard Killer" />
+    <SlasherCard :reverse-arrow="0" :index="2" :picture="ConeHead" last-name="Head" first-name="Cone" />
+    <SlasherCard :reverse-arrow="0" :index="3" :picture="Silencer" last-name="Silencer" first-name="The" />
+    <SlasherCard :reverse-arrow="0" :index="4" :picture="NormanDates" last-name="Dates" first-name="Norman" />
     <div v-for="(person, index) in people.results" :key="person.email">
       <SlasherCard
         :index="index + 4" :picture="person.picture.large" :firstName="person.name.first" :lastName="person.name.last"
-        :reverse-arrow="Math.floor(Math.random() * 2)"
+        :reverse-arrow="0"
       />
     </div>
-    <SlasherCard :reverse-arrow="1" :index="150" :picture="RPITV" last-name="Subscribe" first-name="Please" />
-    <SlasherCard :reverse-arrow="1" :index="151" :picture="NoUser" last-name="" first-name="User not found" />
+    <SlasherCard :reverse-arrow="0" :index="150" :picture="RPITV" last-name="Subscribe" first-name="Please" />
+    <SlasherCard :reverse-arrow="0" :index="151" :picture="NoUser" last-name="" first-name="User not found" />
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <Suspense>
     <template #default>
       <v-app>
-        <FirstView />
+        <router-view></router-view>
       </v-app>
     </template>
     <template #fallback>loading...</template>
