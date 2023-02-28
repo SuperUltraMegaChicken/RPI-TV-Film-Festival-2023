@@ -1,7 +1,9 @@
 <template>
   <Suspense>
     <template #default>
-      <HomeView />
+      <v-app>
+        <FirstView />
+      </v-app>
     </template>
     <template #fallback>loading...</template>
   </Suspense>
@@ -9,7 +11,7 @@
 
 <script setup lang="ts">
 
-import HomeView from "@/views/HomeView.vue";
+import FirstView from "@/views/FirstView.vue";
 </script>
 
 <style scoped>

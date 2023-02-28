@@ -4,14 +4,13 @@
       <span>#{{index + 1}}</span>
       <v-avatar size="80" :image="picture"/>
       <span>{{firstName}} {{lastName}}</span>
-      <span class="arrow">🔻</span>
-
+      <span :class="{ arrow: reverseArrow || index === 0 }">🔻</span>
     </v-card>
+
   </div>
 </template>
 
 <script setup lang="ts">
-import NormanDates from "../assets/Norman_Dates.jpg";
 
 defineProps({
   firstName: {
@@ -20,13 +19,17 @@ defineProps({
   },
   lastName: {
     type: String,
-    required: true
+    required: false
   },
   picture: {
     type: String,
     required: true
   },
   index: {
+    type: Number,
+    required: true
+  },
+  reverseArrow: {
     type: Number,
     required: true
   }
@@ -47,9 +50,10 @@ defineProps({
   display: grid;
   align-items: center;
   color: white;
-  grid-template-columns: 0.4fr 1.2fr 1.8fr 0.2fr;
+  grid-template-columns: 0.6fr 1.2fr 1.8fr 0.2fr;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 20px;
 }
 
 .arrow {
