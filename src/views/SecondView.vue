@@ -5,7 +5,7 @@
     <h1 class="title">Slasher Rankings</h1>
     <SlasherCard :reverse-arrow="1" :index="0" :picture="Jason" last-name="Voorhes jr" first-name="Jason" />
     <SlasherCard :reverse-arrow="1" :index="1"
-                 picture="https://www.giantfreakinrobot.com/wp-content/uploads/2022/08/rick-astley.jpg"
+                 :picture="CardboardKiller"
                  first-name="Cardboard Killer" />
     <SlasherCard :reverse-arrow="0" :index="2" :picture="ConeHead" last-name="Head" first-name="Cone" />
     <SlasherCard :reverse-arrow="0" :index="3" :picture="Silencer" last-name="Silencer" first-name="The" />
@@ -31,6 +31,7 @@ import NormanDates from "@/assets/Norman_Dates.jpg";
 import RPITV from "@/assets/rpitv_logo.png";
 import Silencer from "@/assets/The_silencer.jpg";
 import NoUser from "@/assets/User_not_found.webp";
+import CardboardKiller from "@/assets/cardboardkiller.jpg";
 
 
 const people = ref([]);

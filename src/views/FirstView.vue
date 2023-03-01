@@ -15,6 +15,10 @@
     </div>
     <SlasherCard :reverse-arrow="1" :index="150" :picture="RPITV" last-name="Subscribe" first-name="Please" />
     <SlasherCard :reverse-arrow="1" :index="151" :picture="NoUser" last-name="" first-name="User not found" />
+    <SlasherCard :reverse-arrow="0" :index="152" :picture="CardboardKiller" first-name="Cardboard Killer" />
+    <div class="bottom-text">
+      Slay™
+    </div>
   </div>
 </template>
 
@@ -28,6 +32,7 @@ import NormanDates from "@/assets/Norman_Dates.jpg";
 import RPITV from "@/assets/rpitv_logo.png";
 import Silencer from "@/assets/The_silencer.jpg";
 import NoUser from "@/assets/User_not_found.webp";
+import CardboardKiller from "@/assets/cardboardkiller.jpg";
 
 
 const people = ref([]);
@@ -61,6 +66,13 @@ const scrollTop = () => {
 div {
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(176,28,28,1) 71%, rgba(95,28,176,1) 100%);
+}
+.bottom-text {
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  margin-bottom: 100px;
+  font-weight: lighter;
 }
 .title {
   text-align: center;
